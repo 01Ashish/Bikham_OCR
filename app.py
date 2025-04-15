@@ -8,6 +8,7 @@ from gpt_prompt import process, process_other, assistant, assistant_other
 from prompt import board_certificate_prompt, irs_prompt, bank_letter_prompt, clia_prompt, individual_liability_certificate_prompt, business_liability_certificate_prompt, void_check_prompt, w9_form_prompt, dea_prompt, business_or_facility_license_prompt, aog_prompt, acc_prompt, sdat_prompt, dl_prompt, degree_prompt, pli_prompt, collaborative_agreement_prompt, npdb_prompt, ofac_prompt, sam_prompt, medicare_opt_out_prompt, medicare_certificate_prompt, medicaid_certificate_prompt, oig_prompt, nv_business_license_prompt, ama_prompt,business_license_prompt
 from pdf2image import convert_from_path
 from pytesseract import image_to_string
+import pytesseract
 from PIL import Image
 app = Flask(__name__)
 
