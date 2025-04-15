@@ -20,7 +20,7 @@ def process(image_path, prompt,additional_data=None):
     }
 
     payload = {
-    "model": "gpt-4o-mini",
+    "model": "gpt-4o-2024-08-06",
     "messages": [
         {
             "role" : "system",
@@ -74,7 +74,7 @@ def process_other(image_path,user_input):
     }
 
     payload = {
-    "model": "gpt-4o-mini",
+    "model": "gpt-4o-2024-08-06",
     "messages": [
         {
             "role" : "system",
@@ -159,7 +159,7 @@ def assistant(image_path,prompt,additional_data=None):
         instructions=f"""You are my assistant who can answer questions from the given PDF.  Note : Document should be your priority if don't get anything out of that than only use this Tesseract OCR based extracted text -   ocr_extracted_text = "{additional_data} "  """,
         tools=[{"type": "file_search"}],
         tool_resources={"file_search": {"vector_store_ids": [vector_store.id]}},
-        model="gpt-4o-mini"
+        model="gpt-4o-2024-08-06"
     ) 
 
 
@@ -235,7 +235,7 @@ def assistant_other(image_path,user_input):
         instructions="You are my assistant who can answer questions from the given PDF",
         tools=[{"type": "file_search"}],
         tool_resources={"file_search": {"vector_store_ids": [vector_store.id]}},
-        model="gpt-4o-mini"
+        model="gpt-4o-2024-08-06"
     ) 
 
 
